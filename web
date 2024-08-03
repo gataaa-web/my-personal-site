@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎来到LX的个人网站</title>
+    <style>
+        body {
+            font-family: 'SimSun', 'Songti SC', serif; /* 使用中文字体 */
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #c8102e; /* 红色背景 */
+            color: #ffd700; /* 金色文字 */
+            padding: 20px 0;
+            text-align: center;
+            font-size: 24px;
+            border-bottom: 5px solid #ffd700; /* 金色下边框 */
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .content {
+            padding: 20px;
+            background: #fff;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            border-bottom: 2px solid #c8102e; /* 红色下边框 */
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+        }
+        .contact {
+            margin-top: 20px;
+        }
+        .contact a {
+            color: #333;
+            text-decoration: none;
+        }
+        .form-container {
+            margin: 20px 0;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            border-bottom: 2px solid #c8102e;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        .form-container input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-container input[type="submit"] {
+            background: #c8102e;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-container input[type="submit"]:hover {
+            background: #a00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        欢迎来到LX的个人网站
+    </header>
+    <div class="container">
+        <div class="content">
+            <h2>个人简介</h2>
+            <p>河南郑州101中学全校第一，担任高一十四班团支书，学生会主席。</p>
+        </div>
+        <div class="content contact">
+            <h2>联系方式</h2>
+            <p>电话: <a href="tel:110">110</a></p>
+        </div>
+        <div class="form-container">
+            <h2>想让我知道你吗？</h2>
+            <form id="contactForm">
+                <input type="text" id="userContact" placeholder="请输入你的联系方式" required>
+                <input type="submit" value="提交">
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // 阻止默认的表单提交行为
+
+            var userContact = document.getElementById('userContact').value;
+
+            // 模拟短信发送
+            alert('你的联系方式：' + userContact + '，已经发送到17000100199。');
+
+            // 清空输入框
+            document.getElementById('userContact').value = '';
+        });
+    </script>
+</body>
+</html>
